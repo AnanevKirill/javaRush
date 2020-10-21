@@ -11,24 +11,24 @@ public class Solution {
         horse.run();
     }
 
-    public static interface CanFly {
+    public interface CanFly {
         public abstract void fly();
     }
 
-    public static abstract class Horse {
+    public static class Horse {
         public void run() {
 
         }
     }
 
     public static class Pegasus extends Horse implements CanFly {
-        public abstract void fly() {
+        public void fly() {
 
         }
     }
 
-    public static class SwimmingPegasus extends Pegasus {
-        public void swim();
+    public static abstract class SwimmingPegasus extends Pegasus {
+        public abstract void swim();
     }
 
 }
