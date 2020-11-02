@@ -2,6 +2,7 @@ package com.javarush.task.task08.task0830;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Collections;
 
 /* 
 Задача по алгоритмам Ӏ Java Syntax: 8 уровень, 11 лекция
@@ -23,7 +24,15 @@ public class Solution {
     }
 
     public static void sort(String[] array) {
-        //напишите тут ваш код
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i; j < array.length; j++) {
+                if (isGreaterThan(array[i], array[j])) {
+                    String temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }//напишите тут ваш код
     }
 
     //Метод для сравнения строк: 'а' больше чем 'b'

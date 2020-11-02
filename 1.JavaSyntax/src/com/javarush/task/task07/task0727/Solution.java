@@ -16,14 +16,24 @@ public class Solution {
         ArrayList<String> strings = new ArrayList<String>();
         while (true) {
             String string = reader.readLine();
-            if (string == null || string.isEmpty()) break;
+            if (string == null || string.isEmpty()) {
+                break;
+            }
             strings.add(string);
         }
 
         ArrayList<String> resultStrings = new ArrayList<String>();
         for (int i = 0; i < strings.size(); i++) {
             String string = strings.get(i);
-            resultStrings.add(string.toUpperCase());
+            String vivod;
+            if (string.length() % 2 == 0) {
+                vivod = string + " " + string;
+            } else {
+                vivod = string + " " + string + " " + string;
+            }
+
+
+            resultStrings.add(vivod);
         }
 
         for (int i = 0; i < resultStrings.size(); i++) {
