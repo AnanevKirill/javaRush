@@ -2,6 +2,10 @@ package com.javarush.task.task10.task1020;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /* 
 Задача по алгоритмам Ӏ Java Syntax: 10 уровень, 11 лекция
@@ -22,6 +26,24 @@ public class Solution {
     }
 
     public static void sort(int[] array) {
-        //напишите тут ваш код
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+
+        // Arrays.stream(array).sorted();
+
+//        System.out.println(array[9]);
+//        System.out.println(array[10]);
+//        List<Integer> list = new ArrayList<>();
+//        for (int i = 0; i < array.length; i++) {
+//            list.add(i)=array[i];
+//        }
+//        Collections.sort(list);//напишите тут ваш код
     }
 }
