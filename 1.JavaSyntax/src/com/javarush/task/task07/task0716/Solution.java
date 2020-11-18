@@ -28,13 +28,14 @@ public class Solution {
             }
             if (strings.get(i).contains("р")) {
                 strings.remove(i);
-                i++;
+                i--;
             }
             else if (strings.get(i).contains("л")&&!(strings.get(i).contains("р"))) {
-                strings.add(strings.get(i));
+                strings.add(0,strings.get(i));
+                i++;
 
             }
-           i++;
+          // i++;
 
 
         }

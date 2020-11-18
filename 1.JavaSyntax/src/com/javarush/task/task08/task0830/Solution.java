@@ -2,7 +2,7 @@ package com.javarush.task.task08.task0830;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Collections;
+import java.lang.reflect.Array;
 
 /* 
 Задача по алгоритмам Ӏ Java Syntax: 8 уровень, 11 лекция
@@ -24,15 +24,15 @@ public class Solution {
     }
 
     public static void sort(String[] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i; j < array.length; j++) {
-                if (isGreaterThan(array[i], array[j])) {
-                    String temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
-            }
-        }//напишите тут ваш код
+      for (int i=0; i<array.length-1;i++){
+          for (int j=i;j<array.length;j++){
+              if(isGreaterThan(array[i],array[j] )){
+                  String promez =array[i];
+                  array[i]=array[j];
+                  array[j]=promez;
+              }
+          }//напишите тут ваш код
+      }
     }
 
     //Метод для сравнения строк: 'а' больше чем 'b'
